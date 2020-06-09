@@ -1,0 +1,31 @@
+package atrasados;
+
+import java.util.Scanner;
+
+public class dois {
+
+    public static void main(String[] args) {
+        Scanner New = new Scanner(System.in);
+        int a, b, c, delta, x1, x2, raiz;
+        System.out.println("insira o coeficiente A: ");
+        a = New.nextInt();
+        System.out.println("insira o coeficiente B: ");
+        b = New.nextInt();
+        System.out.println("insira o coeficiente C: ");
+        c = New.nextInt();
+        delta = b * b - 4 * a * c;
+        raiz = (int) Math.sqrt(delta);
+        if (delta < 0) {
+            System.out.println("não existe raiz real");
+        } else if (delta == 0) {
+            x1 = -b / (2 * 4);
+            System.out.println("as raizes reais tem valores iguais a: " + x1);
+        } else {
+            x1 = (-b + raiz) / (2 * a);
+            System.out.println("a primeira raiz é igual a " + x1);
+            x2 = (-b - raiz) / (2 * a);
+            System.out.println("a segunda raiz é igual a " + x2);
+        }
+
+    }
+}
